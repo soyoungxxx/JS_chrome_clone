@@ -1,5 +1,3 @@
-const player = {
-    name: "nico",
-    points: 10,
-    fat: true,
-}
+const title = document.querySelector(".hello h1:third-child");
+
+console.log(title);
