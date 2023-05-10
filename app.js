@@ -6,3 +6,4 @@ function handleTitleClick() {
 }
 
 title.addEventListener("click", handleTitleClick);
+console.log(1);
