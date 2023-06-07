@@ -7,8 +7,10 @@ const TODOS_KEY = "todos"
 let toDos = [];
 
 function deleteTodo(event) {
-    const li = (event.target.parentElement.id);
-    console.log(li);
+    const li = event.target.parentElement;
+    li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 
 function saveToDos() {
