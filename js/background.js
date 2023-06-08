@@ -1,18 +1,24 @@
 const images = [
-    "0.png",
-    "1.png",
-    "2.jpg",
-    "3.jpg",
-    "4.png",
-    "5.jpg",
-    "6.jpg",
-    "7.jpg",
-    "8.jpg",
+    "img/0.png",
+    "img/1.png",
+    "img/2.jpg",
+    "img/3.jpg",
+    "img/4.png",
+    "img/5.jpg",
+    "img/6.jpg",
+    "img/7.jpg",
+    "img/8.jpg",
 ];
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
-const bgImage = document.createElement("img");
+const IMG_NUMBER = images.length;
 
-bgImage.src = `img/${chosenImage}`;
+const getNumber = () => {
+    return Math.floor(Math.random() * IMG_NUMBER);
+}
 
-document.body.appendChild(bgImage);
+const paintImage = (imgNumber) => {
+    const backgroundimage = "url('" + images[imgNumber] + "')"
+    document.body.style.backgroundImage = backgroundimage;
+}
+
+paintImage(getNumber());
