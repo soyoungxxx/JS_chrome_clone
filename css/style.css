@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
- 
+@import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css'); 
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -29,7 +44,8 @@ body {
             "header header header"
             "a clock todo"
             ". . ."
-            "b quote weather";
+            "quote quote quote"
+            ". . weather";
 }
 
 .clockDiv {
@@ -44,6 +60,28 @@ body {
 
 .loginDiv {
     margin-right: 20px;
+}
+
+.quoteDiv {
+    grid-area: quote;
+    align-items:bottom;
+}
+
+.quote {
+    color: white;
+    font-family:'NanumSquareNeo-Variable';
+    font-size: 30px;
+    font-weight: border;
+    display: block;
+}
+
+.author {
+    display:block;
+    margin-top: 20px;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 25px;
+    font-weight: border;
 }
 
 .loginInput {
@@ -74,16 +112,25 @@ body {
     transition: 0.25s;
 }
 
+.dateStyle {
+    color: white;
+    font-family: 'Cafe24Ssurround';
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-top: 100px;
+}
 .clockStyle {
     color: white;
-    font-family: Century Gothic, sans-serif;
+    font-family: 'Cafe24Ssurround';
     font-size: 120px;
     font-weight: bolder;
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .greetingStyle {
     color: white;
-    font-family: Century Gothic, sans-serif;
+    font-family: 'Cafe24Ssurround';
     margin-top: 5px;
 }
