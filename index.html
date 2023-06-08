@@ -7,54 +7,45 @@
         <link rel="stylesheet" href="css/style.css"/>
         <title>Monument App</title>
     </head>
-    <body class="bgImage">
-        
-        <!--
-            로그인 버튼 생성
-            로그인 버튼 클릭 시 로그인 페이지로 이동
-            로그인 버튼은 오른쪽 상단에 위치
-        -->
-        <form id="login-form" class="hidden" align="right">
-            <input
-                class="loginInput"
-                required="required"
-                maxlength="15"
-                type="text"
-                placeholder="ID"
-            />
-            <button class="loginButton">Log In</button>
-        </form>
+    <body>
 
-        <!--
-            시계 화면 중앙에서 살짝 위쪽에 배치
-        -->
-        <div id="clockDiv" class="clock">
-            <h2 id="clock" class="clockStyle">00:00:00</h2>
+        <div class="container">
+
+            <div class="headerDiv">
+                <div class="loginDiv" align="right">
+                    <form id="login-form" class="hidden">
+                        <input
+                            class="loginInput"
+                            required="required"
+                            maxlength="15"
+                            type="text"
+                            placeholder="ID"
+                        />
+                        <button class="loginButton">Log In</button>
+                    </form>
+                    <form id="logout-form" class="hidden">
+                        <button class="loginButton">Log out</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="clockDiv" align="center">
+                <h2 id="clock" class="clockStyle">00:00:00</h2>
+                <h1 id="greeting" class="hidden greetingStyle"></h1>
+            </div>
+
         </div>
 
-        <!-- 
-            로그인한 사용자가 누군지 알려주는 항목
-            로그인한 사용자와 투두리스트가 연결 됐으면 좋겠다
-        -->
-        <h1 id="greeting" class="hidden"></h1>
 
-        <!--
-            투두 리스트
-            홈 화면에 보여주는 게 최선? 여긴 좀 더 생각해보기
-        -->
-        <form id="todo-form">
+        <!-- <form id="todo-form">
             <input type="text" placeholder="Write a To Do and Press Enter" required />
         </form>
         <ul id="todo-list"></ul>
 
-        <!--
-            명언 출력
-            화면 어디에 배치하는 게 제일 자연스러울까?
-        -->
         <div id="quote">
             <span></span>
             <span></span>
-        </div>
+        </div> -->
         
         <script src="js/greeting.js"></script>
         <script src="js/clock.js"></script>
